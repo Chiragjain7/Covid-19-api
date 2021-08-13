@@ -1,0 +1,49 @@
+<%-include('./partials/header.ejs')%>
+<header>
+    <h1 class="text-center">India on Covid-19</h1>
+  </header>
+  <div class="container">
+  <div class="global_data">
+  <div class="card " style="width: 18rem;">
+      <div class="card-body  text-center">
+        <h5 class="card-title ">Confirmed </h5>
+        <p class="card-text confirmed"><%= data.confirmed %></p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body  text-center">
+        <h5 class="card-title">Recovered </h5>
+        <p class="card-text recovered"> <%= data.recovered %></p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body  text-center">
+        <h5 class="card-title">Deceased </h5>
+        <p class="card-text deceased"><%= data.deaths %></p>
+      </div>
+    </div>
+  </div>
+  <div class="updates text-center">
+    <h2>Recent Updates</h2>
+    <div class="d-flex flex-column mb-3">
+      <div class="bd-highlight new"><%= updates[0] %></div>
+      <div class="bd-highlight new"> <%= updates[1] %></div>
+      <div class="bd-highlight new"> <%= updates[2] %></div>
+      <div class="bd-highlight new"> <%= updates[3] %></div>
+      <div class="bd-highlight new"> <%= updates[4] %></div>
+    </div>
+  </div>
+  <div class="headings">
+    <p>India Geocoded Graph</p>
+  </div>
+         <div id="IndianMap" style="width: 1100px; height: 750px;"></div>
+         <p>If the graph isnt shown please refresh</p>
+         <div class="headings">
+            <p>Daily new cases since March 1st</p>
+        </div>
+         <div id="LineGraph" style="width: 1100px; height: 750px;"></div>
+         <%-include('./partials/sticky_footer.ejs')%>
+<script src="js/dom_manipulation.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="js/indian.js"></script>
+<%-include('./partials/footer.ejs')%>
