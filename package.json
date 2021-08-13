@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev": "./node_modules/.bin/env-cmd -f ./config/dev.env nodemon app.js"
   },
-  "author": "navneet",
+  "author": "chirag",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.3",
